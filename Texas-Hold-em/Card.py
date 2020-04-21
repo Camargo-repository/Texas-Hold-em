@@ -4,7 +4,7 @@ class Card(object):
         Value: 1 = Ace, 2-10 = themselves, 11 = Jack, 12 = Queen, 
                 13 = King
     """
-       
+
     def __init__(self, suit: int, val: int):
         self.suit = suit;
         self.value = val;
@@ -35,6 +35,15 @@ class Card(object):
 
         self.name = val_name.get(val, "Invalid Value") + " of " + suit_name.get(suit, "Invalid Suit");
 
+    #getters
+    def get_name(): return name;
+    def get_suit(): return suit;
+    def get_value(): return value;
+
+    #setters
+    def set_name(word): self.name = word;
+    def set_suit(num): self.suit = num;
+    def set_value(val): self.value = val;
 
 
         #    def suit_switch(arg):
