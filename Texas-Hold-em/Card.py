@@ -46,34 +46,6 @@ class Card(object):
     def set_value(val): self.value = val;
 
 
-        #    def suit_switch(arg):
-#       switcher = {
-#            1: "Spades",
-#            2: "Clubs",
-#            3: "Diamonds",
-#            4: "Hearts",
-#       }
-#        print(switcher.get(arg, "Invalid Suit"))
-
-#    def val_switch(arg):
-#        switcher = {
-#            1: "Ace",
-#            2: "Two",
-#            3: "Three",
-#            4: "Four",
-#            5: "Five",
-#            6: "Six",
-#            7: "Seven",
-#            8: "Eight",
-#            9: "Nine",
-#            10: "Ten",
-#            11: "Jack",
-#            12: "Queen",
-#            13: "King"
-#        }
-#        print(switcher.get(arg,"Invalid value"));
-
-
       
         
 

@@ -1,4 +1,5 @@
 import Card
+import random
 
 class Deck(object):
     """ Collection of 52 self:
@@ -9,9 +10,9 @@ class Deck(object):
         for i in range(1,5):
             for j in range(1,14):
                 self.deck.append(Card.Card(i,j));
-    def len(self):
+    def len(list):
         length = 0;
-        for i in self.deck:
+        for i in list:
             length = length + 1;
         return length;
 
@@ -37,7 +38,15 @@ class Deck(object):
             else: #odd
                 self.deck.append(half_2[h2_index]);
                 h2_index = h2_index + 1;
-
+    
+    #Random Shuffle: Moves
+    def random_shuffle(self):
+        temp = self.deck.copy();
+        length = len(self.deck);
+        self.deck.clear()
+        
+        for val in range(0,length):
+            self.deck.append(temp.pop(random.randint(0,len(temp)-1)));
 
     #Checks if the deck has a standard amount of self & suits
     def is_deck_valid(self):
@@ -46,7 +55,7 @@ class Deck(object):
                     5:0, 6:0, 7:0, 8:0,
                     9:0, 10:0, 11:0, 12:0,
                     13:0};
-        length = self.len()
+        length = len(self.deck)
         for i in range(0,length):
             suit_dict[self.deck[i].suit] = suit_dict[self.deck[i].suit]+1;
             val_dict[self.deck[i].value] = val_dict[self.deck[i].value]+1;
